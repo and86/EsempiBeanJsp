@@ -13,6 +13,7 @@
 	ServizioRegistrazione su = new ServizioRegistrazione();
 	UtenteBean u = su.getUtente(utente.getUsername());
 
+	if(utente.isValid2()){
 	if (u != null) {
 		String pass_web = su.convertiPassword(utente.getPassword()); //pass che inserisco nella pagina login ancora da crittografare
 		String pass_db = u.getPassword(); //pass nel db già crittografata 
@@ -29,7 +30,10 @@
 
 <%
 	}
-	} else {
+	}
+	}
+	
+	else {
 		messaggio.campiNonValidi();
 %>
 <jsp:forward page="Login.jsp" />
