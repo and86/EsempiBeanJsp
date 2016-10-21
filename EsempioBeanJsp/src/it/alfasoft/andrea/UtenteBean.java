@@ -90,6 +90,17 @@ public class UtenteBean implements Serializable,DataBean{
 		
 		return res;
 	}
+	@Override
+	public boolean isValid2() {
+		boolean res=false;
+		
+		if(	(!username.isEmpty() && username!=null)&&
+				(!password.isEmpty() && password!=null)
+				){
+		
+		
+		return res;
+	}
 	
 	
 	
